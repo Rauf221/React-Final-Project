@@ -7,7 +7,7 @@ import { FaFacebookF } from "react-icons/fa";
 const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   return (
     <div
-      className={`fixed inset-0 z-50 transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[100] transition-opacity duration-500 ${
         isSidebarOpen
           ? "bg-gray-800 bg-opacity-75 opacity-100"
           : "opacity-0 pointer-events-none"
@@ -18,9 +18,9 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } overflow-y-auto`}  
       >
-        <div className="pt-8 h-[130px] flex justify-center bg-black  sticky top-0">
+        <div className="pt-8 h-[110px] flex justify-center items-center bg-black pb-10  sticky top-0">
           <img
-            className="w-[200px] h-[60px] "
+            className="w-[200px] h-[40px] "
             src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/techblog-logo-dark@2x.png"
             alt="Logo"
           />

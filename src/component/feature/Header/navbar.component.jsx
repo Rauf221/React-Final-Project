@@ -17,9 +17,9 @@ const Navbar = () => {
 
   return (
     <nav className={isDarkMode ? "dark" : "light"}>
-      <div className="w-full h-[75px] sticky">
-        <div className="container mx-auto pl-20 relative pr-20">
-          <div className="flex justify-between items-center h-[75px]">
+      <div className="w-full z-50 sticky top-0">
+        <div className="container mx-auto pl-20 relative z-20 pr-20">
+          <div className="flex justify-between items-center ">
             <div className="flex items-center">
               <button
                 className={isDarkMode ? "text-white" : "text-black"}
@@ -41,10 +41,10 @@ const Navbar = () => {
             </div>
             <div className="w-[60%]">
               <ul className="flex justify-start gap-10 ml-5 text-md font-bold">
-                <li>
+                <li className="border-b-0 hover:border-blue-600 hover:border-b-2 pt-5 py-5">
                   <Link to="/">Home</Link>
                 </li>
-                <li>
+                <li className="border-b-0 hover:border-blue-600 hover:border-b-2 pt-5 py-5">
                   <Link to="/">
                     <h1 className="flex items-center gap-1">
                       Feature
@@ -54,7 +54,7 @@ const Navbar = () => {
                     </h1>
                   </Link>
                 </li>
-                <li className="group">
+                <li className="border-b-0 ease-in-out duration-300  transition-all  group  hover:border-blue-600 hover:border-b-2 pt-5 py-5">
                   <Link to="/">
                     <h1 className="flex items-center gap-1">
                       Technology
@@ -63,103 +63,103 @@ const Navbar = () => {
                       </div>
                     </h1>
                   </Link>
-                    <div className="absolute hidden pt-5 group-hover:flex  right-0 left-0  transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
-                    <div className={isDarkMode ? "text-white, bg-black flex  w-[85%] mx-auto h-[270px]   right-0 left-0 gap-5 border-b border-r border-l p-3  transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0" : "text-black, flex bg-white  mx-auto  right-0 left-0 gap-5  p-3  transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"} >
-                      <div className="w-[230px]">
-                      
-                        <div>
-                          <img
-                            className="w-[230px] h-[120px] rounded-lg object-cover"
-                            src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_242235046_xl-2015-1-1024x582.jpg"
-                            alt=""
-                          />
+                    <div className="absolute z-[100] ease-in-out delay-100 duration-300 transition-all opacity-0 invisible group-hover:visible   group-hover:opacity-100   pt-5 group-hover:flex group-hover:transition-opacity group-hover:duration-300  right-0 left-0   transform   translate-y-4 ">
+                      <div className={isDarkMode ? "text-white  bg-black  w-[85%] mx-auto h-[270px]   right-0 left-0 gap-5  p-3   flex  transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0" : "text-black, flex bg-white  mx-auto  right-0 left-0 gap-5  p-3  transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"} >
+                        <div className="w-[230px] z-50">
+                        
+                          <div>
+                            <img
+                              className="w-[230px] h-[120px] rounded-lg object-cover"
+                              src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_242235046_xl-2015-1-1024x582.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div className="flex flex-col gap-2">
+                            <p className="text-md">
+                              Is the Hyperloop Doomed? What Elon Musk’s Latest
+                              Setback Really Means
+                            </p>
+                            <p className="text-xs text-gray-400">Mar 10, 2022</p>
+                          </div>
                         </div>
-                        <div className="flex flex-col gap-2">
-                          <p className="text-md">
-                            Is the Hyperloop Doomed? What Elon Musk’s Latest
-                            Setback Really Means
-                          </p>
-                          <p className="text-xs text-gray-400">Mar 10, 2022</p>
+                        <div className="w-[230px] z-50">
+                          <div>
+                            <img
+                              className="w-[230px] h-[120px] rounded-lg object-cover"
+                              src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash-1024x683.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div className="flex flex-col gap-2">
+                            <p className="text-md">
+                              The Best Early Black Friday Deals on Gaming Laptops
+                              and Accessories
+                            </p>
+                            <p className="text-xs text-gray-400">Mar 10, 2022</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="w-[230px]">
-                        <div>
-                          <img
-                            className="w-[230px] h-[120px] rounded-lg object-cover"
-                            src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash-1024x683.jpg"
-                            alt=""
-                          />
+                        <div className="w-[230px]">
+                          <div>
+                            <img
+                              className="w-[230px] h-[120px] rounded-lg object-cover"
+                              src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bogdan-glisik-1661469-1-1024x886.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div className="flex flex-col gap-2">
+                            <p className="text-md">
+                              Apple Watch’s ECG Can Help Diagnose Heart Problem:
+                              Research
+                            </p>
+                            <p className="text-xs text-gray-400">Jan 19, 2021</p>
+                          </div>
                         </div>
-                        <div className="flex flex-col gap-2">
-                          <p className="text-md">
-                            The Best Early Black Friday Deals on Gaming Laptops
-                            and Accessories
-                          </p>
-                          <p className="text-xs text-gray-400">Mar 10, 2022</p>
+                        <div className="w-[230px]">
+                          <div>
+                            <img
+                              className="w-[230px] h-[120px] rounded-lg object-cover"
+                              src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-luis-quintero-1787236-1024x683.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div className="flex flex-col gap-2">
+                            <p className="text-md">
+                              Simple Tips and Tricks to Take Care of Your
+                              Expensive DSLR Camera
+                            </p>
+                            <p className="text-xs text-gray-400">Jan 16, 2021</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="w-[230px]">
-                        <div>
-                          <img
-                            className="w-[230px] h-[120px] rounded-lg object-cover"
-                            src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bogdan-glisik-1661469-1-1024x886.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="flex flex-col gap-2">
-                          <p className="text-md">
-                            Apple Watch’s ECG Can Help Diagnose Heart Problem:
-                            Research
-                          </p>
-                          <p className="text-xs text-gray-400">Jan 19, 2021</p>
-                        </div>
-                      </div>
-                      <div className="w-[230px]">
-                        <div>
-                          <img
-                            className="w-[230px] h-[120px] rounded-lg object-cover"
-                            src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-luis-quintero-1787236-1024x683.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="flex flex-col gap-2">
-                          <p className="text-md">
-                            Simple Tips and Tricks to Take Care of Your
-                            Expensive DSLR Camera
-                          </p>
-                          <p className="text-xs text-gray-400">Jan 16, 2021</p>
-                        </div>
-                      </div>
-                      <div className="w-[230px]">
-                        <div>
-                          <img
-                            className="w-[230px] h-[120px] rounded-lg object-cover"
-                            src="https://smartmag.theme-sphere.com/classic/wp-content/uploads/sites/3/2013/12/323207352_99cfa642d7_o-1030x579.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="flex flex-col gap-2">
-                          <p className="text-md">
-                            Tech Study Reveals Effects of Mobile Technology on
-                            Professionals
-                          </p>
-                          <p className="text-xs text-gray-400">Jan 15, 2021</p>
+                        <div className="w-[230px]">
+                          <div>
+                            <img
+                              className="w-[230px] h-[120px] rounded-lg object-cover"
+                              src="https://smartmag.theme-sphere.com/classic/wp-content/uploads/sites/3/2013/12/323207352_99cfa642d7_o-1030x579.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div className="flex flex-col gap-2">
+                            <p className="text-md">
+                              Tech Study Reveals Effects of Mobile Technology on
+                              Professionals
+                            </p>
+                            <p className="text-xs text-gray-400">Jan 15, 2021</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
                 </li>
-                <li>
-                  <Link to="/">
+                <li className="border-b-0 hover:border-violet-500 hover:border-b-2 pt-5 py-5">
+                  <Link to="/gadgets">
                     <h1>Gadgets</h1>
                   </Link>
                 </li>
-                <li>
+                <li className="border-b-0 hover:border-green-600 hover:border-b-2 pt-5 py-5">
                   <Link to="/">
                     <h1>Phones</h1>
                   </Link>
                 </li>
-                <li>
+                <li className="border-b-2 border-transparent hover:border-blue-600 hover:border-b-2 pt-5 py-5">
                   <Link to="/">
                     <h1>Buy Theme</h1>
                   </Link>
