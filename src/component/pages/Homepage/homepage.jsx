@@ -1,12 +1,23 @@
 import React from "react";
 
 import Navbar from "../../feature/Header/navbar.component";
+import Footerr from "../../feature/Footer/footer";
+import Layout from "../../feature/Layout/layout.component";
+import { Outlet } from "react-router-dom";
+
 const Homepage = () => {
   return (
-    <nav>
-      <Navbar/>
-    </nav>
-   
+    <>
+      <nav>
+        <Navbar />
+      </nav>
+      <main>
+        <Outlet/>
+      </main>
+      <footer>
+        <Footerr />
+      </footer>
+    </>
   );
 };
 
