@@ -6,13 +6,14 @@ import MediumCard from "../../Cards/MediumCards/MediumCard";
 import SmallCard from "../../Cards/SmallCards/SmallCard";
 import { useTheme } from "../../Dark&Lightmode/ThemeContext";
 import Section2cards from "../../Cards/MediumCards/section2cards";
+import Section3small from "../../Cards/SmallCards/section3small";
 
 const fetchCards = async (url) => {
   try {
-    const { data } = await axios.get(url);
+    const {data}  = await axios.get(url);
     return data;
   } catch (error) {
-    console.error("Error fetching cards:", error.message); // Log error details
+    console.error("Error fetching cards:", error.message); 
     throw new Error("Error fetching cards");
   }
 };
@@ -21,7 +22,7 @@ const Layout = () => {
   const { isDarkMode } = useTheme();
 
   const {
-    data: largeCards = [], // Default to empty array
+    data: largeCards = [],
     isLoading: isLoadingLargeCards,
     error: errorLargeCards,
   } = useQuery({
@@ -29,8 +30,17 @@ const Layout = () => {
     queryFn: () => fetchCards("http://localhost:3001/largeCards"),
   });
 
+  const cardDataForTrendingVideosSection = largeCards?.filter(
+    (card) => card.id === 2
+  )[0];
+  const DataForSection1 = largeCards?.filter(
+    (card) => card.id === 1
+  )[0];
+  console.log(cardDataForTrendingVideosSection, "dataaaaaaa");
+ 
+ 
   const {
-    data: mediumCards = [], // Default to empty array
+    data: mediumCards = [],
     isLoading: isLoadingMediumCards,
     error: errorMediumCards,
   } = useQuery({
@@ -39,7 +49,7 @@ const Layout = () => {
   });
 
   const {
-    data: smallCards = [], // Default to empty array
+    data: smallCards = [],
     isLoading: isLoadingSmallCards,
     error: errorSmallCards,
   } = useQuery({
@@ -48,19 +58,40 @@ const Layout = () => {
   });
 
   const {
-    data: section2cards = [], // Default to empty array
+    data: section2cards = [],
     isLoading: isLoadingSection2Cards,
     error: errorSection2Cards,
   } = useQuery({
     queryKey: ["Section2Cards"],
     queryFn: () => fetchCards("http://localhost:3001/section2Cards"),
   });
+  const {
+    data: section3small = [],
+    isLoading: isLoadingSection3small,
+    error: errorSection3small,
+  } = useQuery({
+    queryKey: ["section3small"],
+    queryFn: () => fetchCards("http://localhost:3001/section3small"),
+  });
 
-  if (isLoadingLargeCards || isLoadingMediumCards || isLoadingSmallCards || isLoadingSection2Cards) {
+  if (
+    isLoadingLargeCards ||
+    isLoadingMediumCards ||
+    isLoadingSmallCards ||
+    isLoadingSection2Cards||
+    isLoadingSection3small
+  ) {
     return <div>Loading...</div>;
   }
 
-  if (errorLargeCards || errorMediumCards || errorSmallCards || errorSection2Cards) {
+  if (
+    errorLargeCards ||
+    errorMediumCards ||
+    errorSmallCards ||
+    errorSection2Cards||
+    errorSection3small
+    
+  ) {
     return <div>Error occurred while fetching data</div>;
   }
 
@@ -70,9 +101,9 @@ const Layout = () => {
         <div className="w-full h-[1000px] flex pt-10 gap-10">
           {/* Large Cards */}
           <div className="w-[70%] h-[100%] flex flex-col gap-10">
-            {largeCards.map((card) => (
-              <LargeCard key={card?.id} {...card} isDarkMode={isDarkMode} />
-            ))}
+            
+              <LargeCard key={DataForSection1?.id} {...DataForSection1} isDarkMode={isDarkMode} />
+            
 
             <div className="flex h-[100%] w-[100%] gap-10">
               {/* Medium Cards */}
@@ -113,7 +144,30 @@ const Layout = () => {
             <Section2cards key={card?.id} {...card} isDarkMode={isDarkMode} />
           ))}
         </div>
-        
+      </div>
+      <div className="bg-cyan-700 w-full h-[800px]">
+        <div className="container mx-auto h-[800px] pl-20 pr-20 ">
+          <div className={`flex items-center gap-10 pt-16 text-white`}>
+            <h1 className="font-bold text-2xl">Tranding Videos </h1>
+            <div className="h-1 w-[82%] border border-gray-500"></div>
+          </div>
+          {/* 2 div 60/40 */}
+          <div className="flex w-full gap-10">
+            <div className="w-[65%] h-[500px] mt-10 ">
+              {
+                <LargeCard
+                  key={cardDataForTrendingVideosSection?.id}
+                  {...cardDataForTrendingVideosSection}
+                />
+              }
+            </div>
+            <div className="w-[35%] h-[400px] mt-10">
+              {section3small.map((card) => (
+                <Section3small key={card?.id} {...card} isDarkMode={isDarkMode} />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </body>
   );

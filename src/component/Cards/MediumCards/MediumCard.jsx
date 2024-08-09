@@ -1,7 +1,7 @@
 import React from "react";
 import { TbSquareRotated } from "react-icons/tb";
 
-const MediumCard = ({ image, category, title, author, date, isDarkMode }) => {
+const MediumCard = ({ image, category, title, author, date, isDarkMode  }) => {
     
   return (
     
