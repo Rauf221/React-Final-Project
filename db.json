@@ -1,0 +1,74 @@
+{
+  "largeCards": [
+    {
+      "id": 1,
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_29247013_xl-2015-2-1024x683.jpg",
+      "category": "GADGETS",
+      "title1": "Save $25 on Philips Wired Headphone For A",
+      "title2": "Great Sounding Over-Ear Headphone",
+      "author": "Shane Doe",
+      "date": "Jan 12, 2020",
+      "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+    }
+  ],
+  "mediumCards": [
+    {
+      "id": 1,
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_29247013_xl-2015-2-1024x683.jpg",
+      "category": "GADGETS",
+      "title": "Tablet PC Market to Witness Exponential Growth by 2028, Sources Say",
+      "author": "Shane Doe",
+      "date": "Jan 12, 2020"
+    },
+    {
+      "id": 2,
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_29247013_xl-2015-2-1024x683.jpg",
+      "category": "GADGETS",
+      "title": "Tablet PC Market to Witness Exponential Growth by 2028, Sources Say",
+      "author": "Shane Doe",
+      "date": "Jan 12, 2020"
+    }
+  ],
+  "smallCards": [
+    {
+      "id": 1,
+      "category": "TECHNOLOGY",
+      "title": "Schools, Parents Disagree over Bans on Student Mobile Phones",
+      "author": "Shane Doe",
+      "timeAgo": "6 min ago",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
+    },
+    {
+      "id": 2,
+      "category": "TECHNOLOGY",
+      "title": "PC Game Deals: Stealth Classic to Grab, Fresh VR Bundle & More",
+      "author": "Shane Doe",
+      "timeAgo": "6 min ago",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
+    },
+    {
+      "id": 3,
+      "category": "TECHNOLOGY",
+      "title": "Electric Car Owners to Pay Road Tax from 2025, Hunt Announces",
+      "author": "Shane Doe",
+      "timeAgo": "6 min ago",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
+    },
+    {
+      "id": 4,
+      "category": "TECHNOLOGY",
+      "title": "Electric Car Owners to Pay Road Tax from 2025, Hunt Announces",
+      "author": "Shane Doe",
+      "timeAgo": "6 min ago",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
+    },
+    {
+      "id": 5,
+      "category": "TECHNOLOGY",
+      "title": "Electric Car Owners to Pay Road Tax from 2025, Hunt Announces",
+      "author": "Shane Doe",
+      "timeAgo": "6 min ago",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
+    }
+  ]
+}

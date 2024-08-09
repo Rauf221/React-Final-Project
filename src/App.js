@@ -1,14 +1,17 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, RouterProvider } from 'react-router-dom';
-import Homepage from './component/pages/Homepage/homepage';
-import Page2 from './component/pages/example4/page2';
+import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from './component/Dark&Lightmode/ThemeContext';
 import { routers } from './rutes';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 const App = () => {
   return (
     <ThemeProvider>
-      <RouterProvider  router={routers}/>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={routers} />
+      </QueryClientProvider>
     </ThemeProvider>
   );
 };

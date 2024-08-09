@@ -63,8 +63,8 @@ const Navbar = () => {
                       </div>
                     </h1>
                   </Link>
-                    <div className="absolute z-[100] ease-in-out delay-100 duration-300 transition-all opacity-0 invisible group-hover:visible   group-hover:opacity-100   pt-5 group-hover:flex group-hover:transition-opacity group-hover:duration-300  right-0 left-0   transform   translate-y-4 ">
-                      <div className={isDarkMode ? "text-white  bg-black  w-[85%] mx-auto h-[270px]   right-0 left-0 gap-5  p-3   flex  transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0" : "text-black, flex bg-white  mx-auto  right-0 left-0 gap-5  p-3  transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"} >
+                    <div className="absolute z-[100] ease-in-out mr-20 ml-20 delay-100 duration-300 transition-all opacity-0 invisible group-hover:visible   group-hover:opacity-100   pt-5 group-hover:flex group-hover:transition-opacity group-hover:duration-300  right-0 left-0   transform   translate-y-4 ">
+                      <div className={isDarkMode ? "text-white  bg-black  mx-auto   right-0 left-0 gap-5   p-3 flex  transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0" : "text-black, flex bg-white p-3 mx-auto  right-0 left-0 gap-5    transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"} >
                         <div className="w-[230px] z-50">
                         
                           <div>
