@@ -42,11 +42,12 @@ const Layout = () => {
   }
 
   return (
-    <div className={isDarkMode ? " bg-black" : "bg-white "}>
-      <div className="container mx-auto z-0 pl-20 pr-20">
-        <div className="w-full h-[1200px] flex pt-10 gap-10">
+     <body className={isDarkMode ? " bg-black" : "bg-white "}>
+      
+      <div className="container mx-auto  pl-20 pr-20">
+        <div className="w-full h-[1000px] flex pt-10 gap-10">
           {/* Large Cards */}
-          <div className="w-[70%] h-[80%] flex flex-col gap-10">
+          <div className="w-[70%] h-[100%]  flex flex-col gap-10">
             {largeCards.map((card) => (
               <LargeCard key={card.id} {...card}  isDarkMode={isDarkMode} />
             ))}
@@ -74,12 +75,14 @@ const Layout = () => {
           </div>
         </div>
         {/* horicontal column cards */}
-        <div>
-          
+        <div className=" flex  items-center justify-between mt-10 mb-10">
+          <div className="h-1 border w-[42%] "></div>
+          <div className="text-3xl font-bold  "><h1 className={ isDarkMode ? "text-white" : "text-black  "}>Editor's Picks</h1></div>
+          <div className="h-1 border w-[42%]"></div>
         </div>
       </div>
-    </div>
+   
+  </body>
   );
 };
-
 export default Layout;
