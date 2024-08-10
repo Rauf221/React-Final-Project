@@ -1,7 +1,8 @@
 import React from "react";
 import { TbSquareRotated } from "react-icons/tb";
+import { FaPlay } from "react-icons/fa";
 
-const LargeCard = ({ image, category, title1, title2, author, date, authorImage, ...props}) => {
+const LargeCard = ({ image, category, title1, title2, author, date, authorImage, type, ...props }) => {
   return (
     <div className="h-[100%] relative overflow-hidden rounded-xl">
       <img
@@ -9,6 +10,13 @@ const LargeCard = ({ image, category, title1, title2, author, date, authorImage,
         src={image}
         alt=""
       />
+      <div
+        className={`absolute h-16 w-16 items-center justify-center top-52 left-96 rounded-full border-2 text-white ${
+          type === "video" ? "flex" : "hidden"
+        }`}
+      >
+        <FaPlay />
+      </div>
       <div className="absolute bottom-48 left-10">
         <h1 className="pl-3 pr-3 py-1 text-white font-bold bg-fuchsia-600 rounded-md text-xs">
           {category}

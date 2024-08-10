@@ -5,7 +5,7 @@ const MediumCard = ({ image, category, title, author, date, isDarkMode  }) => {
     
   return (
     
-    <div className="w-[100%] shadow-md rounded-xl ">
+    <div className={`w-[100%] shadow-md rounded-xl ${isDarkMode ? "text-white bg-black " : " text-black bg-white"}`} >
       <div className="relative overflow-hidden rounded-xl">
         <img
           className="w-[100%] h-[30%] -z-10 object-cover transition-all duration-500 hover:scale-105"
@@ -18,11 +18,11 @@ const MediumCard = ({ image, category, title, author, date, isDarkMode  }) => {
           </h1>
         </div>
       </div>
-      <div className={isDarkMode ? "text-white bg-black" : "bg-white text-black"}>
+      <div className= {`  ${isDarkMode ? "text-white" : "bg-white"}`}>
         <h1 className="p-6 font-bold text-xl">{title}</h1>
       </div>
-      <div className={isDarkMode ? "text-white bg-black" : "bg-white text-black"}>
-        <h1 className="flex ml-6 font-bold items-center gap-2 text-xs">
+      <div className={` ${isDarkMode ? "text-white" : " text-black"}`}>
+        <h1 className="flex ml-6 font-bold items-center  gap-2 text-xs">
           {author}
           <p className="text-gray-500 flex items-center">
             <TbSquareRotated /> {date}

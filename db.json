@@ -156,5 +156,47 @@
       "timeAgo": "6 min ago",
       "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
     }
+  ],
+  "mediumvideocards": [
+    {
+      "id": 1,
+      "count": "1",
+      "category": "GADGETS",
+      "title": "Schools, Parents Disagree over Bans on Student Mobile Phones",
+      "author": "Shane Doe",
+      "timeAgo": "6 min ago",
+      "date": "Jan 12, 2020",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
+    },
+    {
+      "id": 2,
+      "count": "2",
+      "category": "TECHNOLOGY",
+      "title": "PC Game Deals: Stealth Classic to Grab, Fresh VR Bundle & More",
+      "author": "Shane Doe",
+      "timeAgo": "6 min ago",
+      "date": "Jan 12, 2020",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
+    },
+    {
+      "id": 3,
+      "count": "3",
+      "category": "PHONES",
+      "title": "Electric Car Owners to Pay Road Tax from 2025, Hunt Announces",
+      "author": "Shane Doe",
+      "timeAgo": "6 min ago",
+      "date": "Jan 12, 2020",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
+    },
+    {
+      "id": 4,
+      "count": "4",
+      "category": "TECHNOLOGY",
+      "title": "Electric Car Owners to Pay Road Tax from 2025, Hunt Announces",
+      "author": "Shane Doe",
+      "timeAgo": "6 min ago",
+      "date": "Jan 12, 2020",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
+    }
   ]
 }

@@ -12,7 +12,7 @@ const Section3small = ({ title, author, timeAgo, image, isDarkMode }) => {
             {title}
           </p>
         </div>
-        <div className="flex gap-6">
+        <div className="flex gap-3">
           <p className="text-gray-400 font-semibold text-xs">{author}</p>
           <p className="text-gray-400 font-semibold text-xs flex items-center gap-1">
             <FaRegClock /> {timeAgo}
@@ -20,7 +20,7 @@ const Section3small = ({ title, author, timeAgo, image, isDarkMode }) => {
         </div>
       </div>
       <div className="relative">
-        <img className="w-[250px] h-[80px] rounded-2xl" src={image} alt="Pick 3" />
+        <img className="w-[220px] h-[80px] rounded-2xl" src={image} alt="Pick 3" />
         <div className=" absolute h-10 w-10 flex items-center justify-center top-5 left-14 rounded-full border-2 text-white">
            <FaPlay />
         </div>

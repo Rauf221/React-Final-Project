@@ -6,6 +6,7 @@ import {
   fetchSmallCards,
   fetchSection2Cards,
   fetchSection3Small,
+  fetchMediumVideoCards
 } from "../Services/apiService.js"; 
 
 export const useLargeCards = () => {
@@ -40,5 +41,11 @@ export const useSection3Small = () => {
   return useQuery({
     queryKey: ["section3small"],
     queryFn: fetchSection3Small,
+  });
+};
+export const useMediumVideoCards = () => {
+  return useQuery({
+    queryKey: ["mediumVideoCards"],
+    queryFn: fetchMediumVideoCards,
   });
 };
