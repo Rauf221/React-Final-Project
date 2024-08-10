@@ -243,5 +243,29 @@
       "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash.jpg"
     }
   
+  ],
+  "phonestechlarge": [
+    {
+      "id": 1,
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_29247013_xl-2015-2-1024x683.jpg",
+      "category": "PHONES",
+      "title1": "Save $25 on Philips Wired Headphone For A",
+      "title2": "Great Sounding Over-Ear Headphone",
+      "author": "Shane Doe",
+      "date": "Jan 12, 2020"
+      
+    },
+    {
+      "id": 2,
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/redd-f-3mWxKnqET3E-unsplash.jpg",
+      "category": "PHONES",
+      "title1": "Soundcore VR Gaming Earbuds Designed for",
+      "title2": "Meta Quest 2 Launched",
+      "author": "Shane Doe ",
+      "date": "Jan 12, 2020 222"
+      
+    }
   ]
+ 
+
 }

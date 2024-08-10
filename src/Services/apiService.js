@@ -28,3 +28,5 @@ export const fetchSection2Cards = () => fetchData("/section2Cards");
 export const fetchSection3Small = () => fetchData("/section3small");
 export const fetchMediumVideoCards = () => fetchData("/mediumvideocards");
 export const fetchSection4Small = () => fetchData("/section4small");
+export const fetchPhonesTechLarge = () => fetchData("/phonestechlarge");
+export const fetchSection4SmallSide = () => fetchData("/section4smallside");

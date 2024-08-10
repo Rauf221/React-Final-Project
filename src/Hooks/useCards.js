@@ -7,7 +7,9 @@ import {
   fetchSection2Cards,
   fetchSection3Small,
   fetchMediumVideoCards,
-  fetchSection4Small
+  fetchSection4Small,
+  fetchPhonesTechLarge,
+  fetchSection4SmallSide
 } from "../Services/apiService.js"; 
 
 export const useLargeCards = () => {
@@ -54,5 +56,17 @@ export const useSection4Small = () => {
   return useQuery({
     queryKey: ["section4Small"],
     queryFn: fetchSection4Small,
+  });
+};
+export const usePhonesTechLarge = () => {
+  return useQuery({
+    queryKey: ["phonestechlarge"],
+    queryFn: fetchPhonesTechLarge,
+  });
+};
+export const useSection4SmallSide = () => {
+  return useQuery({
+    queryKey: ["section4smallside"],
+    queryFn: fetchSection4SmallSide,
   });
 };

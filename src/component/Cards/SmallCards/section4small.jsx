@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Section4small = ({image , title,  date, author , ...probs}) => {
+const Section4small = ({image , title,  date, author , isDarkMode, ...probs}) => {
   return (
     <div>
-        <div className="flex ">
+        <div className="flex  ">
               <div>
                 <img
                   className="w-24 h-[70px] rounded-xl"
@@ -11,9 +11,9 @@ const Section4small = ({image , title,  date, author , ...probs}) => {
                   alt="Pick 2"
                 />
               </div>
-              <div className="flex flex-col gap-2 justify-between w-[300px] pl-5">
-                <div className="">
-                  <p className="hover:cursor-pointer text-md text-white transition-all duration-300 ease-in-out hover:text-[#3c3fde] font-bold">
+              <div className="flex flex-col  justify-between w-[300px] pl-5">
+                <div className={`  ${isDarkMode ? "text-white " : " text-black"}`}>
+                  <p className="hover:cursor-pointer text-md  transition-all duration-300 ease-in-out hover:text-[#3c3fde] font-bold">
                     {title}
                   </p>
                 </div>
