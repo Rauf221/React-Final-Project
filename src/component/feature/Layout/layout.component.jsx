@@ -21,7 +21,7 @@ import {
   useMediumVideoCards,
   useSection4Small,
   usePhonesTechLarge,
-  section4SmallSide,
+  useSection4SmallSide,
 } from "../../../Hooks/useCards";
 
 const Layout = () => {
@@ -67,6 +67,11 @@ const Layout = () => {
     isLoading: isLoadingPhonesTechLarge,
     error: errorPhonesTechLarge,
   } = usePhonesTechLarge();
+  const {
+    data: section4smallside = [],
+    isLoading: isLoadingSection4smallside,
+    error: errorSection4smallside,
+  } = useSection4SmallSide();
 
   if (
     isLoadingLargeCards ||
@@ -76,7 +81,8 @@ const Layout = () => {
     isLoadingSection3small ||
     isLoadingMediumVideoCards ||
     isLoadingSection4small || 
-    isLoadingPhonesTechLarge
+    isLoadingPhonesTechLarge || 
+    isLoadingSection4smallside
   ) {
     return <div>Loading...</div>;
   }
@@ -89,7 +95,8 @@ const Layout = () => {
     errorSection3small ||
     errorMediumVideoCards ||
     errorSection4small ||
-    errorPhonesTechLarge
+    errorPhonesTechLarge ||
+    errorSection4smallside
   ) {
     return <div>Error occurred while fetching data</div>;
   }
@@ -298,10 +305,10 @@ const Layout = () => {
           </div>
 
           {/* 30 % part */}
-          <div className="w-[30%] h-[1000px] pt-10 sticky top-0 ">
+          <div className="w-[30%] h-[1090px] pt-10 sticky top-0 ">
             <div className="w-full h-[500px]  relative pt-[50px]">
               <div
-                className={`  w-[88%] mx-auto  h-[390px]  border-4  rounded-lg flex items-center flex-col p-10 ${
+                className={`  w-[88%] mx-auto  h-[390px]  border-4 ml-11 rounded-lg flex items-center flex-col p-10 ${
                   isDarkMode
                     ? "text-white bg-black border-black"
                     : " bg-white text-black"
@@ -347,13 +354,17 @@ const Layout = () => {
               </div>
             </div>
             <div>
-            <div className="flex flex-col gap-3 font-bold mr-5 ml-5 text-xl">
+            <div className="flex flex-col gap-3 font-bold  ml-10 text-xl">
               <h1 className={isDarkMode ? "text-white" : "text-black"}>
                 Popular Now
               </h1>
               <div className="h-0 border border-gray-800"></div>
             </div>
-
+             <div className="w-[93%] flex flex-col items-center ml-10 mt-10">
+             {section4smallside.map((card) => (
+              <Section4smallside key={card?.id} {...card} isDarkMode={isDarkMode} />
+            ))}
+             </div>
             </div>
           </div>
         </div>
