@@ -6,6 +6,7 @@ import { FaSearch } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import Sidebar from "../../sidebar/Sidebar";
 import { useTheme } from "../../Dark&Lightmode/ThemeContext";
+import { GoSun } from "react-icons/go";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className={isDarkMode ? "dark" : "light"}>
-      <div className= {` w-full z-[9999] scroll- fixed top-0  ${isDarkMode ? "text-white bg-black" : " bg-white text-black"}`} >
+      <div className= {` w-full z-[1000] scroll- fixed top-0 shadow-sm  ${isDarkMode ? "text-white bg-black" : " bg-white text-black"}`} >
         <div className="container mx-auto pl-20 relative z-20 pr-20">
           <div className="flex justify-between items-center ">
             <div className="flex items-center">
@@ -174,7 +175,11 @@ const Navbar = () => {
                 className={isDarkMode ? "text-white" : "text-black"}
                 onClick={toggleTheme}
               >
-                <FaRegMoon className="text-md ml-5" />
+                 {isDarkMode ? (
+                  <GoSun className="text-xl ml-5" />
+                ) : (
+                  <FaRegMoon className="text-lg ml-5" />
+                )}
               </button>
               <button className={isDarkMode ? "text-white" : "text-black"}>
                 <FaSearch className="text-lg ml-5" />

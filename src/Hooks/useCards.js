@@ -1,5 +1,4 @@
-// src/hooks/useCards.js
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   fetchLargeCards,
   fetchMediumCards,
@@ -9,64 +8,34 @@ import {
   fetchMediumVideoCards,
   fetchSection4Small,
   fetchPhonesTechLarge,
-  fetchSection4SmallSide
-} from "../Services/apiService.js"; 
+  fetchSection4SmallSide,
+  deleteData,
+  updateData
+} from "../Services/apiService";
 
-export const useLargeCards = () => {
-  return useQuery({
-    queryKey: ["largeCards"],
-    queryFn: fetchLargeCards,
-  });
-};
 
-export const useMediumCards = () => {
-  return useQuery({
-    queryKey: ["mediumCards"],
-    queryFn: fetchMediumCards,
-  });
-};
+export const useLargeCards = () => useQuery({ queryKey: ["largeCards"], queryFn: fetchLargeCards });
+export const useMediumCards = () => useQuery({ queryKey: ["mediumCards"], queryFn: fetchMediumCards });
+export const useSmallCards = () => useQuery({ queryKey: ["smallCards"], queryFn: fetchSmallCards });
+export const useSection2Cards = () => useQuery({ queryKey: ["section2Cards"], queryFn: fetchSection2Cards });
+export const useSection3Small = () => useQuery({ queryKey: ["section3small"], queryFn: fetchSection3Small });
+export const useMediumVideoCards = () => useQuery({ queryKey: ["mediumVideoCards"], queryFn: fetchMediumVideoCards });
+export const useSection4Small = () => useQuery({ queryKey: ["section4Small"], queryFn: fetchSection4Small });
+export const usePhonesTechLarge = () => useQuery({ queryKey: ["phonestechlarge"], queryFn: fetchPhonesTechLarge });
+export const useSection4SmallSide = () => useQuery({ queryKey: ["section4smallside"], queryFn: fetchSection4SmallSide });
 
-export const useSmallCards = () => {
-  return useQuery({
-    queryKey: ["smallCards"],
-    queryFn: fetchSmallCards,
-  });
-};
-
-export const useSection2Cards = () => {
-  return useQuery({
-    queryKey: ["section2Cards"],
-    queryFn: fetchSection2Cards,
+export const useDeleteCard = (queryKey) => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (id) => deleteData(`/section2Cards/${id}`),
+    onSuccess: () => queryClient.invalidateQueries([queryKey]), 
   });
 };
 
-export const useSection3Small = () => {
-  return useQuery({
-    queryKey: ["section3small"],
-    queryFn: fetchSection3Small,
-  });
-};
-export const useMediumVideoCards = () => {
-  return useQuery({
-    queryKey: ["mediumVideoCards"],
-    queryFn: fetchMediumVideoCards,
-  });
-};
-export const useSection4Small = () => {
-  return useQuery({
-    queryKey: ["section4Small"],
-    queryFn: fetchSection4Small,
-  });
-};
-export const usePhonesTechLarge = () => {
-  return useQuery({
-    queryKey: ["phonestechlarge"],
-    queryFn: fetchPhonesTechLarge,
-  });
-};
-export const useSection4SmallSide = () => {
-  return useQuery({
-    queryKey: ["section4smallside"],
-    queryFn: fetchSection4SmallSide,
+export const useUpdateCard = (queryKey) => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ id, data }) => updateData(`/section2Cards/${id}`, data),
+    onSuccess: () => queryClient.invalidateQueries([queryKey]), 
   });
 };

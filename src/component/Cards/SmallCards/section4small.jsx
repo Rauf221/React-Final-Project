@@ -11,7 +11,7 @@ const Section4small = ({image , title,  date, author , isDarkMode, ...probs}) =>
                   alt="Pick 2"
                 />
               </div>
-              <div className="flex flex-col  justify-between w-[300px] pl-5">
+              <div className="flex flex-col  justify-between w-[320px] pl-5">
                 <div className={`  ${isDarkMode ? "text-white " : " text-black"}`}>
                   <p className="hover:cursor-pointer text-md  transition-all duration-300 ease-in-out hover:text-[#3c3fde] font-bold">
                     {title}

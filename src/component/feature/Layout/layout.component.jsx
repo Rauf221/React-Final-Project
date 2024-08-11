@@ -1,4 +1,5 @@
 import React from "react";
+import { TbSquareRotated } from "react-icons/tb";
 // {`  ${isDarkMode ? "text-white" : " text-black"}`}
 import { MdMailOutline } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
@@ -12,6 +13,9 @@ import Section4small from "../../Cards/SmallCards/section4small";
 import PhonesTechLarge from "../../Cards/LargeCards/PhonesTechLarge";
 import { useTheme } from "../../Dark&Lightmode/ThemeContext";
 import Section4smallside from "../../Cards/SmallCards/Section4smallside";
+
+
+
 import {
   useLargeCards,
   useMediumCards,
@@ -22,7 +26,10 @@ import {
   useSection4Small,
   usePhonesTechLarge,
   useSection4SmallSide,
+      
+ 
 } from "../../../Hooks/useCards";
+
 
 const Layout = () => {
   const { isDarkMode } = useTheme();
@@ -72,7 +79,7 @@ const Layout = () => {
     isLoading: isLoadingSection4smallside,
     error: errorSection4smallside,
   } = useSection4SmallSide();
-
+  
   if (
     isLoadingLargeCards ||
     isLoadingMediumCards ||
@@ -80,8 +87,8 @@ const Layout = () => {
     isLoadingSection2Cards ||
     isLoadingSection3small ||
     isLoadingMediumVideoCards ||
-    isLoadingSection4small || 
-    isLoadingPhonesTechLarge || 
+    isLoadingSection4small ||
+    isLoadingPhonesTechLarge ||
     isLoadingSection4smallside
   ) {
     return <div>Loading...</div>;
@@ -101,15 +108,18 @@ const Layout = () => {
     return <div>Error occurred while fetching data</div>;
   }
 
-  const cardDataForTrendingVideosSection = largeCards.find(
-    (card) => card?.id === 2
-  );
-  const DataForSection1 = largeCards.find((card) => card?.id === 1);
+  const cardDataForTrendingVideosSection = largeCards?.filter(
+    (card) => card?.id === "2", 
+    
+  )[0]; 
 
+console.log(cardDataForTrendingVideosSection)
+  const DataForSection1 = largeCards?.filter((cards) => cards?.id === "1")[0];
+ console.log(DataForSection1)
   return (
-    <body className={isDarkMode ? "bg-[#0e0e0e]" : "bg-white"}>
+    <body className={isDarkMode ? "bg-[#0e0e0e]" : "bg-[#f7f7f7]"}>
       <section className="container mx-auto pl-20 mt-10 pr-20">
-        <div className="w-full h-[1000px] flex pt-10 gap-10">
+        <div className="w-full h-[1000px] flex pt-20 gap-10">
           <div className="w-[70%] h-[100%] flex flex-col  gap-10 ">
             <LargeCard
               key={DataForSection1?.id}
@@ -127,7 +137,7 @@ const Layout = () => {
               <h1 className={isDarkMode ? "text-white" : "text-black"}>
                 People's Favorite
               </h1>
-              <div className="h-0 border border-gray-800"></div>
+              <div className="h-0 border border-[#868686]"></div>
             </div>
             {smallCards.map((card) => (
               <SmallCard key={card?.id} {...card} isDarkMode={isDarkMode} />
@@ -189,9 +199,9 @@ const Layout = () => {
         </div>
       </section>
       <section className="container mx-auto pr-20 pl-20 ">
-        <div className="w-full h-[1400px] flex  ">
+        <div className="w-full h-[1500px] flex  ">
           {/* 70% part */}
-          <div className="w-[70%] h-[1400px] flex flex-col gap-5">
+          <div className="w-[70%] h-[1500px] flex flex-col gap-5">
             <div className="flex items-center gap-5 pt-16 text-black">
               <h1
                 className={` font-bold text-xl ${
@@ -205,7 +215,7 @@ const Layout = () => {
                 See All <IoIosArrowForward />
               </button>
             </div>
-            <div className="flex w-full  mt-10 gap-5">
+            <div className="flex w-full  mt-7 gap-5">
               <div className="w-[50%] relative overflow-hidden ">
                 <img
                   className="w-[100%] h-[300px] object-cover overflow-hidden rounded-2xl"
@@ -260,7 +270,7 @@ const Layout = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full h-[300px] flex flex-wrap gap-x-10">
+            <div className="w-full h-[300px] flex flex-wrap gap-10 mt-7 gap-x-10">
               {section4Small.map((card) => (
                 <Section4small
                   key={card?.id}
@@ -285,15 +295,15 @@ const Layout = () => {
               </div>
             </div>
             <div className="flex w-full h-[350px] gap-10">
-                {phonestechlarge.map((card) => ( 
-                  <PhonesTechLarge
+              {phonestechlarge.map((card) => (
+                <PhonesTechLarge
                   key={card?.id}
                   {...card}
                   isDarkMode={isDarkMode}
-                />  
-                ))}
+                />
+              ))}
             </div>
-            <div className="w-full h-[300px] flex flex-wrap gap-x-[72px]">
+            <div className="w-full h-[300px] flex flex-wrap mt-7 gap-10 gap-x-[72px]">
               {section4Small.map((card) => (
                 <Section4small
                   key={card?.id}
@@ -354,18 +364,67 @@ const Layout = () => {
               </div>
             </div>
             <div>
-            <div className="flex flex-col gap-3 font-bold  ml-10 text-xl">
-              <h1 className={isDarkMode ? "text-white" : "text-black"}>
-                Popular Now
+              <div className="flex flex-col gap-3 font-bold  ml-10 text-xl">
+                <h1 className={isDarkMode ? "text-white" : "text-black"}>
+                  Popular Now
+                </h1>
+                <div className="h-0 border border-gray-800"></div>
+              </div>
+              <div className="w-[93%] flex flex-col items-center ml-10 mt-10">
+                {section4smallside.map((card) => (
+                  <Section4smallside
+                    key={card?.id}
+                    {...card}
+                    isDarkMode={isDarkMode}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-between mt-14 pb-14">
+          <div className="h-1 border w-[42%]"></div>
+          <div className="text-3xl font-bold">
+            <h1 className={isDarkMode ? "text-white" : "text-black"}>
+              Editor's Picks
+            </h1>
+          </div>
+          <div className="h-1 border w-[42%]"></div>
+        </div>
+        <div className="flex bg-[#02021f] text-white w-full rounded-2xl  ">
+          <div className="flex flex-col justify-center gap-4  w-50%  ">
+            <div className="pr-12 pl-12">
+              <h1 className="text-3xl font-bold">
+                Pico 4 Review: Should You Actually Buy One Instead Of Quest 2?
               </h1>
-              <div className="h-0 border border-gray-800"></div>
             </div>
-             <div className="w-[93%] flex flex-col items-center ml-10 mt-10">
-             {section4smallside.map((card) => (
-              <Section4smallside key={card?.id} {...card} isDarkMode={isDarkMode} />
-            ))}
-             </div>
+            <div className="flex items-center pr-12 pl-12">
+              <div className=" ">
+                <img
+                  className="w-7 h-7 rounded-full"
+                  src="https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+                  alt=""
+                />
+              </div>
+              <div className=" ">
+                <h1 className="flex ml-4 text-white font-bold items-center gap-2 text-[12px]">
+                  Shane Doe <TbSquareRotated /> Jan 15, 2021
+                </h1>
+              </div>
             </div>
+            <div className="pr-12 pl-12">
+              <h1>
+                To understand the new smart watched and other pro devices of
+                recent focus, we should look to…
+              </h1>
+            </div>
+          </div>
+          <div className="w-[77%] rounded-2xl">
+            <img
+            className=" object-cover rounded-tl-none rounded-2xl rounded-bl-none"
+              src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/woman-in-3d-virtual-reality-glasses_t20_WQVvL4-768x513.jpg"
+              alt=""
+            />
           </div>
         </div>
       </section>

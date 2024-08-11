@@ -7,7 +7,7 @@ import { FaFacebookF } from "react-icons/fa";
 const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   return (
     <div
-      className={`fixed inset-0 z-[100] transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[9999] transition-opacity duration-500 ${
         isSidebarOpen
           ? "bg-gray-800 bg-opacity-75 opacity-100"
           : "opacity-0 pointer-events-none"

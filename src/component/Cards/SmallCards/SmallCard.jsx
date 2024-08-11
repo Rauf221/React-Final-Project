@@ -1,10 +1,11 @@
 import React from "react";
 import { FaRegClock } from "react-icons/fa6";
 
+
 const SmallCard = ({ category, title, author, timeAgo, image, isDarkMode }) => {
   
   return (
-    <div className="flex items-center mt-5 pb-7 border-b-2 border-gray-500">
+    <div className="flex items-center mt-5 pb-4 border-b-2 border-[#8e8e8e]">
       <div className="flex flex-col gap-2 justify-between w-[100%]">
         <div className="text-purple-600 text-xs font-semibold">
           <h1>{category}</h1>
@@ -22,7 +23,7 @@ const SmallCard = ({ category, title, author, timeAgo, image, isDarkMode }) => {
         </div>
       </div>
       <div>
-        <img className="w-[150px] h-[100px] rounded-full" src={image} alt="Pick 3" />
+        <img className="w-[120px] h-[90px] rounded-full" src={image} alt="Pick 3" />
       </div>
     </div>
   );

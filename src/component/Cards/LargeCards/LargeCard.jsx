@@ -2,7 +2,7 @@ import React from "react";
 import { TbSquareRotated } from "react-icons/tb";
 import { FaPlay } from "react-icons/fa";
 
-const LargeCard = ({ image, category, title1, title2, author, date, authorImage, type, ...props }) => {
+const LargeCard = ({ image, category, title1, title2, author, date, authorImage, type, }) => {
   return (
     <div className="h-[100%] relative overflow-hidden rounded-xl">
       <img

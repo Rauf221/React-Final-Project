@@ -1,4 +1,3 @@
-// src/services/apiService.js
 import axios from "axios";
 
 const API_BASE_URL = "http://localhost:3001";
@@ -21,6 +20,28 @@ export const fetchData = async (endpoint, options = {}) => {
   }
 };
 
+
+export const deleteData = async (endpoint) => {
+  try {
+    const response = await apiClient.delete(endpoint);
+    return response.data;
+  } catch (error) {
+    console.error(`Error deleting data from ${endpoint}:`, error.message);
+    throw new Error(`Error deleting data from ${endpoint}`);
+  }
+};
+
+export const updateData = async (endpoint, data) => {
+  try {
+    const response = await apiClient.put(endpoint, data);
+    return response.data;
+  } catch (error) {
+    console.error(`Error updating data from ${endpoint}:`, error.message);
+    throw new Error(`Error updating data from ${endpoint}`);
+  }
+};
+
+// Mevcut API çağrıları:
 export const fetchLargeCards = () => fetchData("/largeCards");
 export const fetchMediumCards = () => fetchData("/mediumCards");
 export const fetchSmallCards = () => fetchData("/smallCards");
