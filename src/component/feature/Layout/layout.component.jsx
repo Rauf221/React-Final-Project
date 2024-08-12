@@ -111,7 +111,9 @@ const Layout = () => {
     isLoadingLastestArticlesLarge ||
     isLoadingLastestArticlesLarge2
   ) {
-    return <div>Loading...</div>;
+    return <div className="w-full mt-16 flex justify-center"> 
+      <img src="https://i.gifer.com/ZKZg.gif" alt="" />
+    </div>;
   }
 
   if (
@@ -496,7 +498,7 @@ const Layout = () => {
             </div>
           </div>
           {/* 30 % part */}
-          <div className="w-[30%] h-[1150px]  sticky top-0 ">
+          <div className="w-[30%] h-[1150px]  sticky top-16 ">
             <div className="w-full h-[350px]  relative pt-[50px]">
               <SocialMediaSection />
             </div>

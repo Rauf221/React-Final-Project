@@ -6,7 +6,7 @@ const Section2cards = ({ id, image, category, title, author, date, isDarkMode, c
   const { mutate: deleteCard } = useDeleteCard();
 
   const handleDelete = () => {
-    if (window.confirm("Bu öğeyi silmek istediğinize emin misiniz?")) {
+    if (window.confirm("R u Sure u what to delete this Card?")) {
       deleteCard(id); 
     }
   };

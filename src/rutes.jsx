@@ -4,7 +4,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Page2 from './component/pages/example4/page2';
 import Homepage from './component/pages/Homepage/homepage';
 import Layout from './component/feature/Layout/layout.component';
-
+import Error from './component/pages/ErrorPage/error';
 export const routers = createBrowserRouter([
 {
     path: '/',
@@ -18,6 +18,12 @@ export const routers = createBrowserRouter([
         path: '/gadgets',
         element: <Page2 />,
       },
+    
     ],
   },
+    {
+      path: '/*',
+      element: <Error />,
+    }
+  
 ]);
