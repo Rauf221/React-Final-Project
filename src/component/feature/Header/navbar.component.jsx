@@ -7,14 +7,22 @@ import { IoIosArrowDown } from "react-icons/io";
 import Sidebar from "../../sidebar/Sidebar";
 import { useTheme } from "../../Dark&Lightmode/ThemeContext";
 import { GoSun } from "react-icons/go";
+import SearchModal from "../../Search/SearchModal";
 
 const Navbar = () => {
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { isDarkMode, toggleTheme } = useTheme();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+const toggleModal = () => {
+  setIsModalOpen(!isModalOpen);
+};
+
 
   return (
     <nav className={isDarkMode ? "dark" : "light"}>
@@ -65,7 +73,7 @@ const Navbar = () => {
                     </h1>
                   </Link>
                     <div className="absolute z-[100] ease-in-out mr-20 ml-20 delay-100 duration-300 transition-all opacity-0 invisible group-hover:visible   group-hover:opacity-100   pt-0 group-hover:flex group-hover:transition-opacity p-3 group-hover:duration-300  right-0 left-0   transform   translate-y-4 ">
-                      <div className={isDarkMode ? "text-white  bg-black  mx-auto   right-0 left-0 gap-5   p-3 flex  transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0" : "text-black, flex bg-white  mx-auto pb-3 right-0 left-0 gap-5    transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"} >
+                      <div className={isDarkMode ? "text-white  bg-black  mx-auto   right-0 left-0 gap-5   p-3 flex  transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0" : "text-black  bg-white  mx-auto   right-0 left-0 gap-5   p-3 flex  transform opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0"} >
                         <div className="w-[220px] z-50">
                         
                           <div>
@@ -181,15 +189,20 @@ const Navbar = () => {
                   <FaRegMoon className="text-lg ml-5" />
                 )}
               </button>
-              <button className={isDarkMode ? "text-white" : "text-black"}>
-                <FaSearch className="text-lg ml-5" />
-              </button>
+              <button
+        className={isDarkMode ? "text-white" : "text-black"}
+        onClick={toggleModal}
+      >
+        <FaSearch className="text-lg ml-5" />
+      </button>
+
             </div>
           </div>
         </div>
       </div>
 
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <SearchModal isModalOpen={isModalOpen} toggleModal={toggleModal} />
     </nav>
   );
 };
