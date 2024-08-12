@@ -111,9 +111,11 @@ const Layout = () => {
     isLoadingLastestArticlesLarge ||
     isLoadingLastestArticlesLarge2
   ) {
-    return <div className="w-full mt-16 flex justify-center"> 
-      <img src="https://i.gifer.com/ZKZg.gif" alt="" />
-    </div>;
+    return (
+      <div className="w-full mt-16 flex justify-center">
+        <img src="https://i.gifer.com/ZKZg.gif" alt="" />
+      </div>
+    );
   }
 
   if (
@@ -462,8 +464,8 @@ const Layout = () => {
             ))}
           </div>
         </div>
-        <div className="flex w-[100%] gap-5">
-          <div className="w-[70%] h-[2500px] flex flex-col gap-5">
+        <div className="flex w-[100%] h-[2550px] gap-5">
+          <div className="w-[70%] h-[2600px] flex flex-col gap-5">
             <div className="flex items-center gap-5 pt-10  text-black">
               <h1
                 className={` font-bold text-2xl ${
@@ -498,12 +500,16 @@ const Layout = () => {
             </div>
           </div>
           {/* 30 % part */}
-          <div className="w-[30%] h-[1150px]  sticky top-16 ">
+          <div className="w-[30%] h-[1170px]  sticky top-16 ">
             <div className="w-full h-[350px]  relative pt-[50px]">
               <SocialMediaSection />
             </div>
             <div className=" p-6 rounded-lg  mx-auto">
-              <h2 className= {` text-lg font-semibold mb-4  ${isDarkMode ? "text-white" : " text-black"}`}>
+              <h2
+                className={` text-lg font-semibold mb-4  ${
+                  isDarkMode ? "text-white" : " text-black"
+                }`}
+              >
                 Gaming Zone
               </h2>
               <div className="relative mb-4">
@@ -516,11 +522,21 @@ const Layout = () => {
                   className="rounded-lg"
                 />
               </div>
-              <h3 className={` text-xl font-bold mb-2 ${isDarkMode ? "text-white" : " text-black"}`}>
+              <h3
+                className={` text-xl font-bold mb-2 ${
+                  isDarkMode ? "text-white" : " text-black"
+                }`}
+              >
                 PS5 vs Xbox Series XS vs Switch Launch Sales Comparison
               </h3>
               <div className="flex items-center text-gray-400 text-sm">
-                <span className={` mr-2 ${isDarkMode ? "text-white" : " text-black"}`}>Shane Doe</span>
+                <span
+                  className={` mr-2 ${
+                    isDarkMode ? "text-white" : " text-black"
+                  }`}
+                >
+                  Shane Doe
+                </span>
                 <span>•</span>
                 <span className="ml-2">Sep 8, 2020</span>
               </div>
