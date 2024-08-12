@@ -13,8 +13,7 @@ import Section4small from "../../Cards/SmallCards/section4small";
 import PhonesTechLarge from "../../Cards/LargeCards/PhonesTechLarge";
 import { useTheme } from "../../Dark&Lightmode/ThemeContext";
 import Section4smallside from "../../Cards/SmallCards/Section4smallside";
-
-
+import FeaturedReviews from "../../Cards/MediumCards/FeaturedReviewsMedium";
 
 import {
   useLargeCards,
@@ -26,10 +25,8 @@ import {
   useSection4Small,
   usePhonesTechLarge,
   useSection4SmallSide,
-      
- 
+  useFeaturedReviewsMedium,
 } from "../../../Hooks/useCards";
-
 
 const Layout = () => {
   const { isDarkMode } = useTheme();
@@ -79,7 +76,12 @@ const Layout = () => {
     isLoading: isLoadingSection4smallside,
     error: errorSection4smallside,
   } = useSection4SmallSide();
-  
+  const {
+    data: featuredreviewsmeium = [],
+    isLoading: isLoadingFeaturedReviewsMedium,
+    error: errorFeaturedReviewsMedium,
+  } = useFeaturedReviewsMedium();
+
   if (
     isLoadingLargeCards ||
     isLoadingMediumCards ||
@@ -89,7 +91,8 @@ const Layout = () => {
     isLoadingMediumVideoCards ||
     isLoadingSection4small ||
     isLoadingPhonesTechLarge ||
-    isLoadingSection4smallside
+    isLoadingSection4smallside ||
+    isLoadingFeaturedReviewsMedium
   ) {
     return <div>Loading...</div>;
   }
@@ -103,19 +106,19 @@ const Layout = () => {
     errorMediumVideoCards ||
     errorSection4small ||
     errorPhonesTechLarge ||
-    errorSection4smallside
+    errorSection4smallside ||
+    errorFeaturedReviewsMedium
   ) {
     return <div>Error occurred while fetching data</div>;
   }
 
   const cardDataForTrendingVideosSection = largeCards?.filter(
-    (card) => card?.id === "2", 
-    
-  )[0]; 
+    (card) => card?.id === "2"
+  )[0];
 
-console.log(cardDataForTrendingVideosSection)
+  console.log(cardDataForTrendingVideosSection);
   const DataForSection1 = largeCards?.filter((cards) => cards?.id === "1")[0];
- console.log(DataForSection1)
+  console.log(DataForSection1);
   return (
     <body className={isDarkMode ? "bg-[#0e0e0e]" : "bg-[#f7f7f7]"}>
       <section className="container mx-auto pl-20 mt-10 pr-20">
@@ -303,7 +306,7 @@ console.log(cardDataForTrendingVideosSection)
                 />
               ))}
             </div>
-            <div className="w-full h-[300px] flex flex-wrap mt-7 gap-10 gap-x-[72px]">
+            <div className=" h-[320px] flex flex-wrap mt-3 gap-10 gap-x-[60px] ">
               {section4Small.map((card) => (
                 <Section4small
                   key={card?.id}
@@ -383,13 +386,13 @@ console.log(cardDataForTrendingVideosSection)
           </div>
         </div>
         <div className="flex items-center justify-between mt-14 pb-14">
-          <div className="h-1 border w-[42%]"></div>
+          <div className="h-1 border w-[40%]"></div>
           <div className="text-3xl font-bold">
             <h1 className={isDarkMode ? "text-white" : "text-black"}>
-              Editor's Picks
+              Featured Reviews
             </h1>
           </div>
-          <div className="h-1 border w-[42%]"></div>
+          <div className="h-1 border w-[40%]"></div>
         </div>
         <div className="flex bg-[#02021f] text-white w-full rounded-2xl  ">
           <div className="flex flex-col justify-center gap-4  w-50%  ">
@@ -421,13 +424,37 @@ console.log(cardDataForTrendingVideosSection)
           </div>
           <div className="w-[77%] rounded-2xl">
             <img
-            className=" object-cover rounded-tl-none rounded-2xl rounded-bl-none"
+              className=" object-cover rounded-tl-none rounded-2xl rounded-bl-none"
               src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/woman-in-3d-virtual-reality-glasses_t20_WQVvL4-768x513.jpg"
               alt=""
             />
           </div>
         </div>
-      </section>
+        <div>
+          <div className="flex gap-5 line-clamp-2 mt-10 ">
+            {featuredreviewsmeium.map((card) => (
+              <FeaturedReviews
+                key={card?.id}
+                {...card}
+                isDarkMode={isDarkMode}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="w-[70%] h-[1500px] flex flex-col gap-5">
+          <div className="flex items-center gap-5 pt-16 text-black">
+            <h1
+              className={` font-bold text-xl ${
+                isDarkMode ? "text-white" : " text-black"
+              }`}
+            >
+              New Gadgets
+            </h1>
+            <div className="h-[3px] w-[83%] border border-gray-300"></div>
+          </div>
+          <div />
+        </div>
+      </section>  
     </body>
   );
 };

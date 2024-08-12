@@ -7,7 +7,7 @@ const MediumVideoCards = ({ image, category, title, author, date, isDarkMode, co
     <div className=" rounded-xl relative mb-10  ">
       <div className="relative z-0 overflow-hidden rounded-xl">
         <img
-          className="w-[100%] relative h-[20%] -z-10 object-cover transition-all duration-500 hover:scale-105"
+          className="w-[340px] relative h-[200px] -z-10 object-cover transition-all duration-500 hover:scale-105"
           src={image}
           alt=""
         />

@@ -17,9 +17,9 @@ const Section2cards = ({ id, image, category, title, author, date, isDarkMode, c
 
   return (
     <div className="rounded-xl mb-10">
-      <div className="relative overflow-hidden rounded-xl">
+      <div className="relative w-72 overflow-hidden rounded-xl">
         <img
-          className="w-full h-30% -z-10 object-cover transition-all duration-500 hover:scale-105"
+          className=" w-96 h-[200px] -z-10 object-cover transition-all duration-500 hover:scale-105"
           src={image}
           alt={title}
         />
@@ -30,9 +30,9 @@ const Section2cards = ({ id, image, category, title, author, date, isDarkMode, c
         </div>
       </div>
 
-      <div className={`flex gap-2 p-4 ${isDarkMode ? "text-white" : "text-black"}`}>
-        <h1 className="font-bold text-3xl text-gray-500">{count}</h1>
-        <h1 className="font-bold hover:text-blue-600 transition-all duration-300 text-md">
+      <div className={`flex gap-4 p-2 ${isDarkMode ? "text-white" : "text-black"}`}>
+        <h1 className="font-bold text-4xl text-gray-400 ">{count}</h1>
+        <h1 className="font-extrabold hover:text-blue-600 transition-all text-gray-700 duration-300 text-md">
           {title}
         </h1>
       </div>
@@ -49,10 +49,10 @@ const Section2cards = ({ id, image, category, title, author, date, isDarkMode, c
       <div className="flex gap-2">
    
         <button
-          className={`w-16 h-5 text-white font-bold rounded-md ${isDarkMode ? "bg-gray-600" : "bg-red-600"}`}
+          className={`w-16 h-5 text-white font-bold rounded-md mb-2 pb-1 ${isDarkMode ? "bg-gray-600" : "bg-red-600"}`}
           onClick={handleDelete} 
         >
-          Sil
+          delete
         </button>
       </div>
     </div>

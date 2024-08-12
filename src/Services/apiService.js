@@ -51,3 +51,4 @@ export const fetchMediumVideoCards = () => fetchData("/mediumvideocards");
 export const fetchSection4Small = () => fetchData("/section4small");
 export const fetchPhonesTechLarge = () => fetchData("/phonestechlarge");
 export const fetchSection4SmallSide = () => fetchData("/section4smallside");
+export const fetchFeaturedReviwsMedium = () => fetchData("/featuredreviewsmedium");

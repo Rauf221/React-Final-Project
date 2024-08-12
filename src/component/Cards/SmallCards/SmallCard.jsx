@@ -23,7 +23,7 @@ const SmallCard = ({ category, title, author, timeAgo, image, isDarkMode }) => {
         </div>
       </div>
       <div>
-        <img className="w-[120px] h-[90px] rounded-full" src={image} alt="Pick 3" />
+        <img className="w-[120px] h-[90px] rounded-full object-cover" src={image} alt="Pick 3" />
       </div>
     </div>
   );

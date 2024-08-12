@@ -3,7 +3,7 @@ import React from 'react'
 const Section4small = ({image , title,  date, author , isDarkMode, ...probs}) => {
   return (
     <div>
-        <div className="flex  ">
+        <div className="flex   ">
               <div>
                 <img
                   className="w-24 h-[70px] rounded-xl"
