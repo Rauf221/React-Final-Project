@@ -19,7 +19,7 @@ const MediumCard = ({ image, category, title, author, date, isDarkMode  }) => {
         </div>
       </div>
       <div className= {`  ${isDarkMode ? "text-white" : "bg-white"}`}>
-        <h1 className="p-6  font-bold text-lg">{title}</h1>
+        <h1 className="p-6  font-bold hover:text-blue-600 duration-300 text-lg">{title}</h1>
       </div>
       <div className={` ${isDarkMode ? "text-white" : " text-black"}`}>
         <h1 className="flex ml-6 font-bold items-center  gap-2 text-xs">

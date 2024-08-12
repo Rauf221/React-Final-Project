@@ -19,7 +19,18 @@
       "author": "Shane Doe ",
       "date": "Jan 12, 2020 222",
       "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+    },
+    {
+      "id": "3",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/matias-islas-Nw0j-2YAnfI-unsplash-1-1024x683.jpg",
+      "category": "GADGETS 2",
+      "title1": "Riot Games Acquires a Wargaming Studio to Help With Live Game",
+      "title2": "Devolopment",
+      "author": "Shane Doe ",
+      "date": "Jan 12, 2020 222",
+      "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
     }
+    
   ],
   "mediumCards": [
     {
@@ -346,5 +357,82 @@
       "date": "Jan 12, 2020",
       "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/42996726655_0df7830ab6_b-1.jpg"
     }
+  ],
+  "lastestarticleslarge":[
+    {
+    "id": "1",
+    "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/thisisengineering-raeng-a7A9O5htrKs-unsplash-1024x683.jpg",
+    "category": "GAMEING",
+    "title": "Game Development This Week: Save On Essential Tools and More",
+    "author": "Shane Doe",
+    "date": "Jan 12, 2020",
+    "description": "To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified…",
+    "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+  },
+  {
+    "id": "2",
+    "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_242235046_xl-2015-1-1024x582.jpg",
+    "category": "TECHNOLOGY",
+    "title": "Is the Hyperloop Doomed? What Elon Musk’s Latest Setback Really Means",
+    "author": "Shane Doe ",
+    "date": "Jan 12, 2020 222",
+    "description": "To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified…",
+    "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+  },
+  {
+    "id": "3",
+    "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash-1024x683.jpg",
+    "category": "TECHNOLOGY",
+    "title": "The Best Early Black Friday Deals on Gaming Laptops and Accessories",
+    "author": "Shane Doe",
+    "date": "Jan 12, 2020",
+    "description": "To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified…",
+    "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+  }
+ 
+  ],
+  "lastestarticleslarge2":[
+    {
+    "id": "1",
+    "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy-gieling-bA5ZJ9JVrb8-unsplash-1.jpg",
+    "category": "GAMEING",
+    "title": "Keep Talking and Nobody Explodes: A Boomer Gaming in VR",
+    "author": "Shane Doe",
+    "date": "Jan 12, 2020",
+    "description": "To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified…",
+    "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+  },
+  {
+    "id": "2",
+    "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bogdan-glisik-1661469-1-1024x886.jpg",
+    "category": "TECHNOLOGY",
+    "title": "Apple Watch’s ECG Can Help Diagnose Heart Problem: Research",
+    "author": "Shane Doe ",
+    "date": "Jan 12, 2020 222",
+    "description": "To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified…",
+    "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+  },
+  {
+    "id": "3",
+    "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-luis-quintero-1787236-1024x683.jpg",
+    "category": "TECHNOLOGY",
+    "title": "Simple Tips and Tricks to Take Care of Your Expensive DSLR Camera",
+    "author": "Shane Doe",
+    "date": "Jan 12, 2020",
+    "description": "To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified…",
+    "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+  },
+  {
+    "id": "4",
+    "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bruno-bueno-3854821.jpg",
+    "category": "TECHNOLOGY",
+    "title": "Hologate Announces New Plans for First Large Format World VR Arcade ",
+    "author": "Shane Doe ",
+    "date": "Jan 12, 2020 222",
+    "description": "To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified…",
+    "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+  }
+ 
   ]
+ 
 }

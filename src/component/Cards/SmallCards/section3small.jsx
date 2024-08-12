@@ -5,7 +5,7 @@ const Section3small = ({ title, author, timeAgo, image, isDarkMode }) => {
   
   return (
     <div className="flex items-center  mt-2 h-[116px] pb-2  border-gray-500">
-      <div className="flex flex-col gap-6 justify-between w-[100%]">
+      <div className="flex flex-col gap-3 justify-between w-[100%]">
         
         <div className="text-white">
           <p className="hover:cursor-pointer text-md line-clamp-2 w-60 transition-all duration-300 ease-in-out hover:text-[#3c3fde] font-bold">
@@ -20,8 +20,8 @@ const Section3small = ({ title, author, timeAgo, image, isDarkMode }) => {
         </div>
       </div>
       <div className="relative">
-        <img className="w-[220px] h-[80px] rounded-2xl" src={image} alt="Pick 3" />
-        <div className=" absolute h-10 w-10 flex items-center justify-center top-5 left-14 rounded-full border-2 text-white">
+        <img className="w-[220px] h-[90px] rounded-2xl" src={image} alt="Pick 3" />
+        <div className=" absolute h-10 w-10 flex items-center justify-center top-6 left-[54px] rounded-full border-2 text-white">
            <FaPlay />
         </div>
       </div>

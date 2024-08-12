@@ -11,7 +11,9 @@ import {
   fetchSection4SmallSide,
   deleteData,
   updateData,
-  fetchFeaturedReviwsMedium
+  fetchFeaturedReviwsMedium,
+  fetchLastestArticlesLarge,
+  fetchLastestArticlesLarge2
 } from "../Services/apiService";
 
 
@@ -25,6 +27,8 @@ export const useSection4Small = () => useQuery({ queryKey: ["section4Small"], qu
 export const usePhonesTechLarge = () => useQuery({ queryKey: ["phonestechlarge"], queryFn: fetchPhonesTechLarge });
 export const useSection4SmallSide = () => useQuery({ queryKey: ["section4smallside"], queryFn: fetchSection4SmallSide });
 export const useFeaturedReviewsMedium = () => useQuery({ queryKey: ["featuredreviewsmedium"], queryFn: fetchFeaturedReviwsMedium });
+export const useLastesArticlesLarge = () => useQuery({ queryKey: ["lastestarticleslarge"], queryFn: fetchLastestArticlesLarge });
+export const useLastesArticlesLarge2 = () => useQuery({ queryKey: ["lastestarticleslarge2"], queryFn: fetchLastestArticlesLarge2 });
 
 export const useDeleteCard = (queryKey) => {
   const queryClient = useQueryClient();

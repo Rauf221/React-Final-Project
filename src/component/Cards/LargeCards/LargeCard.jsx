@@ -23,8 +23,8 @@ const LargeCard = ({ image, category, title1, title2, author, date, authorImage,
         </h1>
       </div>
       <div className="absolute bottom-16 left-10">
-        <h1 className="text-3xl text-white font-bold w-[100%] p-2 bg-black">{title1}</h1>
-        <h1 className="text-3xl text-white font-bold inline-block p-2 mt-2 bg-black">{title2}</h1>
+        <h1 className="text-2xl text-white font-bold w-[100%] p-2 bg-black">{title1}</h1>
+        <h1 className="text-2xl text-white font-bold inline-block p-2 mt-2 bg-black">{title2}</h1>
       </div>
       <div className="absolute z-50 bottom-3 left-11">
         <img className="w-10 h-10 rounded-full" src={authorImage} alt="" />

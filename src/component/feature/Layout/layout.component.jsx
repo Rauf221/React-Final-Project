@@ -14,7 +14,9 @@ import PhonesTechLarge from "../../Cards/LargeCards/PhonesTechLarge";
 import { useTheme } from "../../Dark&Lightmode/ThemeContext";
 import Section4smallside from "../../Cards/SmallCards/Section4smallside";
 import FeaturedReviews from "../../Cards/MediumCards/FeaturedReviewsMedium";
-
+import LastestArticlesLarge from "../../Cards/LargeCards/LastestArticlesLarge";
+import LastestArticlesLarge2 from "../../Cards/LargeCards/LastestArticlesLarge2";
+import SocialMediaSection from "../../SocialMedia/SocialMediaSection";
 import {
   useLargeCards,
   useMediumCards,
@@ -26,7 +28,10 @@ import {
   usePhonesTechLarge,
   useSection4SmallSide,
   useFeaturedReviewsMedium,
+  useLastesArticlesLarge,
+  useLastesArticlesLarge2,
 } from "../../../Hooks/useCards";
+import ArticleList from "../../Cards/SmallCards/GamingZone";
 
 const Layout = () => {
   const { isDarkMode } = useTheme();
@@ -81,6 +86,16 @@ const Layout = () => {
     isLoading: isLoadingFeaturedReviewsMedium,
     error: errorFeaturedReviewsMedium,
   } = useFeaturedReviewsMedium();
+  const {
+    data: lastestarticleslarge = [],
+    isLoading: isLoadingLastestArticlesLarge,
+    error: errorLastestArticlesLarge,
+  } = useLastesArticlesLarge();
+  const {
+    data: lastestarticleslarge2 = [],
+    isLoading: isLoadingLastestArticlesLarge2,
+    error: errorLastestArticlesLarge2,
+  } = useLastesArticlesLarge2();
 
   if (
     isLoadingLargeCards ||
@@ -92,7 +107,9 @@ const Layout = () => {
     isLoadingSection4small ||
     isLoadingPhonesTechLarge ||
     isLoadingSection4smallside ||
-    isLoadingFeaturedReviewsMedium
+    isLoadingFeaturedReviewsMedium ||
+    isLoadingLastestArticlesLarge ||
+    isLoadingLastestArticlesLarge2
   ) {
     return <div>Loading...</div>;
   }
@@ -107,7 +124,9 @@ const Layout = () => {
     errorSection4small ||
     errorPhonesTechLarge ||
     errorSection4smallside ||
-    errorFeaturedReviewsMedium
+    errorFeaturedReviewsMedium ||
+    errorLastestArticlesLarge ||
+    errorLastestArticlesLarge2
   ) {
     return <div>Error occurred while fetching data</div>;
   }
@@ -115,10 +134,10 @@ const Layout = () => {
   const cardDataForTrendingVideosSection = largeCards?.filter(
     (card) => card?.id === "2"
   )[0];
+  const LastestArticle = largeCards?.filter((card) => card?.id === "3")[0];
 
-  console.log(cardDataForTrendingVideosSection);
   const DataForSection1 = largeCards?.filter((cards) => cards?.id === "1")[0];
-  console.log(DataForSection1);
+
   return (
     <body className={isDarkMode ? "bg-[#0e0e0e]" : "bg-[#f7f7f7]"}>
       <section className="container mx-auto pl-20 mt-10 pr-20">
@@ -202,7 +221,7 @@ const Layout = () => {
         </div>
       </section>
       <section className="container mx-auto pr-20 pl-20 ">
-        <div className="w-full h-[1500px] flex  ">
+        <div className="w-full h-[1500px] flex gap-1 ">
           {/* 70% part */}
           <div className="w-[70%] h-[1500px] flex flex-col gap-5">
             <div className="flex items-center gap-5 pt-16 text-black">
@@ -283,7 +302,7 @@ const Layout = () => {
               ))}
             </div>
             <div>
-              <div className="flex items-center gap-5  text-black">
+              <div className="flex items-center gap-5 mb-2 mt-10 text-black">
                 <h1
                   className={` font-bold text-xl ${
                     isDarkMode ? "text-white" : " text-black"
@@ -385,7 +404,7 @@ const Layout = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between mt-14 pb-14">
+        <div className="flex items-center justify-between mt-32 pb-10">
           <div className="h-1 border w-[40%]"></div>
           <div className="text-3xl font-bold">
             <h1 className={isDarkMode ? "text-white" : "text-black"}>
@@ -441,20 +460,75 @@ const Layout = () => {
             ))}
           </div>
         </div>
-        <div className="w-[70%] h-[1500px] flex flex-col gap-5">
-          <div className="flex items-center gap-5 pt-16 text-black">
-            <h1
-              className={` font-bold text-xl ${
-                isDarkMode ? "text-white" : " text-black"
-              }`}
-            >
-              New Gadgets
-            </h1>
-            <div className="h-[3px] w-[83%] border border-gray-300"></div>
+        <div className="flex w-[100%] gap-5">
+          <div className="w-[70%] h-[2500px] flex flex-col gap-5">
+            <div className="flex items-center gap-5 pt-10  text-black">
+              <h1
+                className={` font-bold text-2xl ${
+                  isDarkMode ? "text-white" : " text-black"
+                }`}
+              >
+                Lastest Articles
+              </h1>
+              <div className="h-[3px] w-[77%] border border-gray-300"></div>
+            </div>
+            <div />
+            <div className="flex flex-col w-full   gap-5">
+              {lastestarticleslarge.map((card) => (
+                <LastestArticlesLarge
+                  key={card?.id}
+                  {...card}
+                  isDarkMode={isDarkMode}
+                />
+              ))}
+            </div>
+            <div className="h-[450px] mb-5 mt-5">
+              <LargeCard key={LastestArticle?.id} {...LastestArticle} />
+            </div>
+            <div className="flex flex-col w-full   gap-5">
+              {lastestarticleslarge2.map((card) => (
+                <LastestArticlesLarge2
+                  key={card?.id}
+                  {...card}
+                  isDarkMode={isDarkMode}
+                />
+              ))}
+            </div>
           </div>
-          <div />
+          {/* 30 % part */}
+          <div className="w-[30%] h-[1150px]  sticky top-0 ">
+            <div className="w-full h-[350px]  relative pt-[50px]">
+              <SocialMediaSection />
+            </div>
+            <div className=" p-6 rounded-lg  mx-auto">
+              <h2 className= {` text-lg font-semibold mb-4  ${isDarkMode ? "text-white" : " text-black"}`}>
+                Gaming Zone
+              </h2>
+              <div className="relative mb-4">
+                <div className="absolute top-0 left-0 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded-br-lg">
+                  GAMING
+                </div>
+                <img
+                  src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_422755408_xl-2015-1-1024x512.jpg" // Replace with the actual image URL
+                  alt="PS5 vs Xbox"
+                  className="rounded-lg"
+                />
+              </div>
+              <h3 className={` text-xl font-bold mb-2 ${isDarkMode ? "text-white" : " text-black"}`}>
+                PS5 vs Xbox Series XS vs Switch Launch Sales Comparison
+              </h3>
+              <div className="flex items-center text-gray-400 text-sm">
+                <span className={` mr-2 ${isDarkMode ? "text-white" : " text-black"}`}>Shane Doe</span>
+                <span>•</span>
+                <span className="ml-2">Sep 8, 2020</span>
+              </div>
+            </div>
+            <div>
+              <ArticleList />
+            </div>
+          </div>
         </div>
-      </section>  
+      </section>
     </body>
   );
 };

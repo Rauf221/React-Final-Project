@@ -32,7 +32,7 @@ const Section2cards = ({ id, image, category, title, author, date, isDarkMode, c
 
       <div className={`flex gap-4 p-2 ${isDarkMode ? "text-white" : "text-black"}`}>
         <h1 className="font-bold text-4xl text-gray-400 ">{count}</h1>
-        <h1 className="font-extrabold hover:text-blue-600 transition-all text-gray-700 duration-300 text-md">
+        <h1 className={`font-extrabold hover:text-blue-600 transition-all  duration-300 text-md ${isDarkMode ? "text-white" : "text-gray-700"}`}>
           {title}
         </h1>
       </div>
